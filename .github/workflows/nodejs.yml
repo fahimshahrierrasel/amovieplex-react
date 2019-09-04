@@ -29,3 +29,7 @@ jobs:
       - name: Deploy to github pages
         run: |
           yarn deploy
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
