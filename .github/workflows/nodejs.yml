@@ -22,14 +22,14 @@ jobs:
           yarn build
         env:
           CI: true
-      - name: Set Git Config
-        run: |
-          git config user.email "fahimshahrier2@gmail.com"
-          git config user.name "Md. Fahim Shahrier Rasel"
-      - name: Deploy to github pages
-        run: |
-          yarn deploy
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: build
+      # - name: Set Git Config
+      #   run: |
+      #     git config user.email "fahimshahrier2@gmail.com"
+      #     git config user.name "Md. Fahim Shahrier Rasel"
+      # - name: Deploy to github pages
+      #   run: |
+      #     yarn deploy
+      #   env:
+      #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      #     BRANCH: gh-pages
+      #     FOLDER: build
