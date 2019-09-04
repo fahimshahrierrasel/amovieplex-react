@@ -5,7 +5,7 @@
   "license": "MIT",
   "keywords": [],
   "main": "src/index.js",
-  "homepage": "https://fahimshahrierrasel.github.io/amoiveplex-react/",
+  "homepage": ".",
   "dependencies": {
     "@material-ui/core": "4.4.0",
     "@material-ui/icons": "4.2.1",
