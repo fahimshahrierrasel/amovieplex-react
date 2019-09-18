@@ -3,27 +3,29 @@
   "version": "1.0.0",
   "description": "AMoviePlex Frontend",
   "license": "MIT",
-  "keywords": [],
   "main": "src/index.js",
-  "homepage": ".",
   "dependencies": {
-    "@material-ui/core": "4.4.0",
-    "@material-ui/icons": "4.2.1",
     "clsx": "1.0.4",
     "react": "16.9.0",
     "react-dom": "16.9.0",
     "react-router-dom": "5.0.1",
-    "react-scripts": "3.1.1",
-    "react-swipeable-views": "^0.13.3"
+    "react-scripts": "3.1.1"
   },
   "devDependencies": {
-    "gh-pages": "^2.1.1"
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.1",
+    "prettier": "^1.18.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "lint": "eslint \"**/*.{js,jsx}\" --quiet",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

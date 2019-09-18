@@ -1,10 +1,11 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 
-export default function Contact() {
-
+function Contact() {
   return (
-    <Typography paragraph>Contact</Typography>
-
+    <div>
+      <p>Contact</p>
+    </div>
   );
 }
+
+export default Contact;

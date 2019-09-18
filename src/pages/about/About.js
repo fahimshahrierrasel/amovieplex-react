@@ -1,8 +1,11 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
 
-export default function About() {
+function About() {
   return (
-    <Typography paragraph>About</Typography>
+    <div>
+      <p>About</p>
+    </div>
   );
 }
+
+export default About;
