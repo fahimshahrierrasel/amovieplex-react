@@ -8,8 +8,11 @@ import "./style.scss";
 function App() {
   return (
     <Router>
-      <div>
+      <div className="container">
         <nav>
+          <h1>
+            <Link to="/">A Movie Plex</Link>
+          </h1>
           <ul>
             <li>
               <Link to="/">Home</Link>
@@ -22,10 +25,11 @@ function App() {
             </li>
           </ul>
         </nav>
-
-        <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
+        <div className="main-content">
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </div>
       </div>
     </Router>
   );

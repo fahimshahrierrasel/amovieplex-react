@@ -1,25 +1,39 @@
-$primarycolor: #bada55;
-
+$navColor: #bada55;
+body {
+  margin: 0;
+}
 nav {
+  padding-left: 1em;
+  padding-right: 1em;
+  background: $navColor;
+  display: flex;
+  flex-flow: row wrap;
+  h1 {
+    flex-grow: 1;
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  }
   ul {
+    flex-grow: 2;
     list-style: none;
-    overflow: hidden;
-    color: $primarycolor;
+    align-content: flex-end;
+    color: $navColor;
     li {
       float: left;
-      margin-left: 10px;
       a {
         display: block;
-        text-align: center;
-        padding: 14px 16px;
+        padding: 1em;
         text-decoration: none;
       }
       a:hover {
-        background-color: #bada66;
+        background-color: #ffffff;
       }
     }
-    li:first-of-type {
-      margin-left: 0px;
-    }
   }
+}
+
+.main-content {
+  padding: 1em;
 }
