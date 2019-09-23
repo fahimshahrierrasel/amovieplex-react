@@ -1,0 +1,15 @@
+.tab--header {
+  display: flex;
+  background-color: #027e02;
+  .tab--item {
+    display: block;
+    padding: 1em;
+  }
+  .selected {
+    background-color: #14db6e;
+  }
+}
+.tab--details {
+  display: flex;
+  flex-direction: column;
+}

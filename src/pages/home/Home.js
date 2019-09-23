@@ -1,20 +1,21 @@
 import React, { Component } from "react";
 import "./style.scss";
 import Carousel from "../../components/carousel/Carousel";
-import CarouselCard from "../../components/carousel_card/CarouselCard";
+import CarouselCard from "../../components/movie_card/MovieCard";
+import ShowTimeTab from "../../components/show_time_tab/ShowTimeTab";
 
 class Home extends Component {
   state = {
     movieCards: [
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' },
-      { image: '"https://picsum.photos/seed/picsum/200/300' }
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" },
+      { image: "https://picsum.photos/seed/picsum/200/300" }
     ]
   };
 
@@ -42,10 +43,11 @@ class Home extends Component {
           </div>
         </div>
         <div className="card__carousel__list">
-          {this.state.movieCards.map(card => (
-            <CarouselCard image="https://picsum.photos/seed/picsum/200/300" />
+          {this.state.movieCards.map((card, index) => (
+            <CarouselCard image={card.image} key={index} />
           ))}
         </div>
+        <ShowTimeTab />
       </div>
     );
   }
