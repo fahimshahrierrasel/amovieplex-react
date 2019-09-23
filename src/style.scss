@@ -7,16 +7,14 @@ nav {
   padding-right: 1em;
   background: $navColor;
   display: flex;
-  flex-flow: row wrap;
+  justify-content: space-between;
   h1 {
-    flex-grow: 1;
     a {
       text-decoration: none;
       display: block;
     }
   }
   ul {
-    flex-grow: 2;
     list-style: none;
     align-content: flex-end;
     color: $navColor;
