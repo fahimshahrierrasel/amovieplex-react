@@ -1,0 +1,37 @@
+.footer {
+  margin: 0;
+}
+
+.footer--body {
+  padding: 1em;
+  background-color: #03c536;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer--body__left {
+  flex-basis: 50%;
+}
+
+.footer--body__right {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  ul {
+    flex-basis: 50%;
+    list-style: none;
+    li {
+      padding: 5px;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.footer--footer {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}

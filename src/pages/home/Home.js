@@ -3,6 +3,7 @@ import "./style.scss";
 import Carousel from "../../components/carousel/Carousel";
 import CarouselCard from "../../components/movie_card/MovieCard";
 import ShowTimeTab from "../../components/show_time_tab/ShowTimeTab";
+import ContactInfo from "../../components/contact_info/ContactInfo";
 
 class Home extends Component {
   state = {
@@ -48,6 +49,7 @@ class Home extends Component {
           ))}
         </div>
         <ShowTimeTab />
+        <ContactInfo />
       </div>
     );
   }
