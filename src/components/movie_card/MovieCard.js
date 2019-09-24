@@ -3,23 +3,23 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "./style.scss";
 
-const CarouselCard = ({ image }) => (
+const MovieCard = ({ movie }) => (
   <div
     className="card__carousel"
     style={{
-      backgroundImage: `url(${image})`
+      backgroundImage: `url(${movie.image})`
     }}
   >
-    {/* <img src={image} alt="" /> */}
-    <h1>
-      <Link to="/">Hello</Link>
-    </h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <h2>
+      <Link to={"/" + movie.title.replace(/\s/g, "_").toLowerCase()}>
+        {movie.title}
+      </Link>
+    </h2>
   </div>
 );
 
-CarouselCard.protoTypes = {
-  image: PropTypes.string.isRequired
+MovieCard.protoTypes = {
+  movie: PropTypes.object.isRequired
 };
 
-export default CarouselCard;
+export default MovieCard;

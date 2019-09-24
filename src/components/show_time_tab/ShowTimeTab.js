@@ -71,8 +71,8 @@ class ShowTimeTab extends Component {
           ))}
         </div>
         <div className="tab--details">
-          {this.state.seletedMovie.map(movie => (
-            <MovieListCard key={movie.title} movie={movie} />
+          {this.state.seletedMovie.map((movie, index) => (
+            <MovieListCard key={movie.title} movie={movie} seed={index} />
           ))}
         </div>
       </div>

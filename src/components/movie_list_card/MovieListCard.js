@@ -1,16 +1,11 @@
 import React from "react";
 import "./style.scss";
 
-function MovieListCard({ movie }) {
+function MovieListCard({ movie, seed }) {
   return (
     <div className="movie--list__card">
-      <div
-        className="movie--list__card__image"
-        style={{
-          backgroundImage: `url(https://picsum.photos/seed/picsum/150/200)`
-        }}
-      >
-        <img src="https://picsum.photos/seed/picsum/150/200" alt="" />
+      <div className="movie--list__card__image">
+        <img src={`https://picsum.photos/seed/${seed}/150/200`} alt="" />
       </div>
       <div className="movie--list__card__details">
         <h1>{movie.title}</h1>
