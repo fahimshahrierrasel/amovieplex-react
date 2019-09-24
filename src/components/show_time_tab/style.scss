@@ -1,5 +1,6 @@
 .tab--header {
   display: flex;
+  align-items: flex-start;
   background-color: #027e02;
   .tab--item {
     display: block;
@@ -12,4 +13,6 @@
 .tab--details {
   display: flex;
   flex-direction: column;
+  height: 500px;
+  overflow-y: scroll;
 }

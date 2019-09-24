@@ -8,9 +8,10 @@
     flex-basis: 20%;
     padding: 5px;
     .sidebar__card {
+      margin: 5px 0 5px 0;
       padding: 5px;
-      border: 1px;
-      border-style: outset;
+      border-radius: 0.5rem;
+      box-shadow: 1px 1px 3px 0.5px rgba($color: black, $alpha: 0.75);
     }
   }
 }
@@ -18,14 +19,8 @@
 // home-jhjhj__carsouel1--
 .card__carousel__list {
   display: flex;
-  justify-content: space-between;
   width: 100%;
   overflow-x: scroll;
   scrollbar-width: none;
-  .card__carousel {
-    flex: 0 0 auto;
-    width: 200px;
-    height: 300px;
-    margin: 5px;
-  }
+  padding: 20px 10px 10px 10px;
 }

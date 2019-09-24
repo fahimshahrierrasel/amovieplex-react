@@ -1,9 +1,13 @@
 .movie--list__card {
+  flex: 0 0 auto;
   display: flex;
   margin: 10px;
-  border: inset;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px 0.5px rgba($color: black, $alpha: 0.75);
+  overflow: hidden;
   .movie--list__card__image {
     flex-basis: 10%;
+    background-size: cover;
   }
   .movie--list__card__details {
     flex-basis: 90%;

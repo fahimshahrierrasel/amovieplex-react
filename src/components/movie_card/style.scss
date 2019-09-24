@@ -1,0 +1,29 @@
+$distance: -4rem;
+
+.card__carousel {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  border-radius: 1rem;
+  box-shadow: 4px 4px 12px 2px rgba($color: black, $alpha: 0.75);
+  padding: 2rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s;
+  &:not(:first-child) {
+    margin-left: $distance;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.card__carousel:hover,
+.card__carousel:focus-within {
+  transform: translateY((-1rem));
+}
+
+.card__carousel:hover ~ .card__carousel,
+.card__carousel:focus-within ~ .card__carousel {
+  transform: translateX(($distance * -1));
+}

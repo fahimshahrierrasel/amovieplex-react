@@ -4,7 +4,12 @@ import "./style.scss";
 function MovieListCard({ movie }) {
   return (
     <div className="movie--list__card">
-      <div className="movie--list__card__image">
+      <div
+        className="movie--list__card__image"
+        style={{
+          backgroundImage: `url(https://picsum.photos/seed/picsum/150/200)`
+        }}
+      >
         <img src="https://picsum.photos/seed/picsum/150/200" alt="" />
       </div>
       <div className="movie--list__card__details">
