@@ -1,7 +1,9 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .main-content {
-  padding: 1em;
+  padding: 1rem;
 }
