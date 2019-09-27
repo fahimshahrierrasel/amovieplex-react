@@ -5,8 +5,11 @@ import "./style.scss";
 function Carousel({ image, title }) {
   return (
     <div className="carousel">
-      <img src={image} alt="{title}" />
-      <h2>{title}</h2>
+      <div className="overlay">
+        <h2>{title}</h2>
+        <div className='btn btn--animated'>Play Trailer</div>
+      </div>
+      <img src={image} alt={title}/>
     </div>
   );
 }
