@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
+import MovieDetails from "./pages/movie_details/MovieDetails";
 import "./style.scss";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/movie" component={MovieDetails} />
         </div>
         <Footer />
       </div>
