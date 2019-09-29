@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 
-function Index() {
-  return <App />;
+function Index(Component) {
+  return <Component />;
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<Index />, rootElement);
+ReactDOM.render(Index(App), rootElement);

@@ -4,13 +4,14 @@
 
 .footer--body {
   padding: 1em;
-  background-color: #03c536;
+  background-color: #2ecc71;
   display: flex;
   justify-content: space-between;
 }
 
 .footer--body__left {
   flex-basis: 50%;
+  padding-right: 1em;
 }
 
 .footer--body__right {
@@ -24,14 +25,18 @@
       padding: 5px;
       a {
         text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        }
       }
     }
   }
 }
 
 .footer--footer {
-  background-color: green;
+  background-color: #27ae60;
   display: flex;
   justify-content: center;
+  color: white;
   padding: 5px;
 }

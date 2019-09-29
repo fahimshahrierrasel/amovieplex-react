@@ -9,10 +9,7 @@ function MovieListCard({ movie }) {
         <img src={movie.image} alt="" />
       </div>
       <div className="movie-list__card-details">
-        <Link
-          className="movie__title"
-          to={movie.title.replace(/\s/g, "_").toLowerCase()}
-        >
+        <Link className="movie__title" to={"/movie"}>
           {movie.title}
         </Link>
         <p className="movie__desc">
