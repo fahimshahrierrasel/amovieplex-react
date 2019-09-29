@@ -37,7 +37,7 @@ class MovieDetails extends Component {
   };
   render() {
     return (
-      <div>
+      <div className="movie-details__container">
         <div
           className="movie--hero"
           style={{ backgroundImage: `url(https://picsum.photos/1920/400)` }}

@@ -1,0 +1,49 @@
+$navColor: #3498db;
+nav {
+  width: 100vw;
+  background: darken($navColor, 15);
+  z-index: 999;
+  top:0;
+  left: 0;
+  position: fixed;
+  box-shadow:3px 0px 10px 1px rgba(0, 0, 0, 0.3);
+
+  .container{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      height: 100%;
+    }
+
+    ul {
+      list-style: none;
+      color: $navColor;
+      display: flex; 
+
+      li {
+
+        a {
+          display: block;
+          text-decoration: none;
+          color:white;
+          padding: 1em .8em;
+          border-bottom: 2px solid transparent;
+          transition: 0.2s;
+        }
+
+        a:hover {
+          color: black;
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
+}
