@@ -11,9 +11,7 @@ const MovieCard = ({ movie }) => (
     }}
   >
     <h2>
-      <Link to={"/" + movie.title.replace(/\s/g, "_").toLowerCase()}>
-        {movie.title}
-      </Link>
+      <Link to={"/movie"}>{movie.title}</Link>
     </h2>
   </div>
 );
