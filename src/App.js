@@ -7,20 +7,23 @@ import About from "./pages/about/About";
 import Contact from "./pages/contact/Contact";
 import MovieDetails from "./pages/movie_details/MovieDetails";
 import "./style.scss";
+import ScrollToTop from './components/hoc/sroll-to-top'
 
 function App() {
   return (
     <Router>
-      <div className="container">
-        <Header />
-        <div className="main-content">
-          <Route path="/" exact component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/movie" component={MovieDetails} />
+      <ScrollToTop>
+        <div className="container">
+          <Header />
+          <div className="main-content">
+            <Route path="/" exact component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/movie" component={MovieDetails} />
+          </div>
+          <Footer />
         </div>
-        <Footer />
-      </div>
+      </ScrollToTop>
     </Router>
   );
 }
