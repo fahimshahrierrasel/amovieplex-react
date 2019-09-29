@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./style.scss";
-import MovieListCard from "../movie_list_card/MovieListCard";
+import MovieListCard from "../movie-list-card";
+import "./show-time-tab.scss";
 
 class ShowTimeTab extends Component {
   state = {

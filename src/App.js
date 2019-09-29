@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import MovieDetails from "./pages/movie_details/MovieDetails";
-import "./style.scss";
-import ScrollToTop from './components/hoc/sroll-to-top'
+import Header from "./components/header";
+import Footer from "./components/footer";
+import Home from "./pages/home";
+import About from "./pages/about";
+import Contact from "./pages/contact";
+import MovieDetails from "./pages/movie-details";
+import ScrollToTop from "./components/hoc/sroll-to-top";
+import "./app.scss";
 
 function App() {
   return (
