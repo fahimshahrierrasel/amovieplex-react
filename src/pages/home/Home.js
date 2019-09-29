@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./style.scss";
-import Carousel from "../../components/carousel/Carousel";
-import MovieCard from "../../components/movie_card/MovieCard";
-import ShowTimeTab from "../../components/show_time_tab/ShowTimeTab";
-import ContactInfo from "../../components/contact_info/ContactInfo";
+import Carousel from "../../components/carousel";
+import MovieCard from "../../components/movie-card";
+import ShowTimeTab from "../../components/show-time-tab";
+import ContactInfo from "../../components/contact-info";
+import "./home.scss";
 
 class Home extends Component {
   state = {

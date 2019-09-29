@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./style.scss";
+import "./movie-details.scss";
 
 class MovieDetails extends Component {
   state = {
