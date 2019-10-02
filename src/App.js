@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import MovieDetails from "./pages/movie-details";
-import ScrollToTop from "./components/hoc/sroll-to-top";
+import Header from "./views/components/header";
+import Footer from "./views/components/footer";
+import Home from "./views/pages/home";
+import About from "./views/pages/about";
+import Contact from "./views/pages/contact";
+import MovieDetails from "./views/pages/movie-details";
+import ScrollToTop from "./views/components/hoc/sroll-to-top";
+import Login from './views/pages/login'
+import { Routes } from './constants/routes'
 import "./app.scss";
 
 function App() {
@@ -14,18 +16,25 @@ function App() {
     <Router>
       <ScrollToTop>
         <div className="container">
-          <Header />
-          <div className="main-content">
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/movie" component={MovieDetails} />
-          </div>
-          <Footer />
+          <Route render={({location}) => {
+              return location.pathname !== Routes.LOGIN_PAGE() ? <Header /> : null;
+          }}/>
+          
+          <main className="main-content">
+            <Route exact path={Routes.HOME_PAGE()} component={Home} />
+            <Route exact path={Routes.ABOUT_PAGE()} component={About} />
+            <Route exact path={Routes.CONTACT_PAGE()} component={Contact} />
+            <Route exact path={Routes.LOGIN_PAGE()} component={Login} />
+            <Route path={Routes.MOVIE_DETAIL_PAGE(':id')} component={MovieDetails} />
+          </main>
+          
+          <Route render={({location}) => {
+              return location.pathname !== Routes.LOGIN_PAGE() ? <Footer/> : null;
+          }}/>
         </div>
       </ScrollToTop>
     </Router>
   );
 }
 
-export default App;
+export default App ;
