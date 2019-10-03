@@ -1,0 +1,29 @@
+.hero {
+  margin-top: 53px;
+  display: flex;
+  .carousel__list {
+    flex-basis: 80%;
+  }
+  .sidebar {
+    flex-basis: 20%;
+    padding: 5px;
+    .sidebar__card {
+      margin: 5px 0 5px 0;
+      padding: 5px;
+      border-radius: 0.5rem;
+      box-shadow: 1px 1px 3px 0.5px rgba($color: black, $alpha: 0.75);
+    }
+  }
+}
+
+// home-jhjhj__carsouel1--
+.card__carousel__list {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 20px 10px 20px 10px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

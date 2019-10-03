@@ -1,0 +1,1 @@
+export const LOGIN_BACKGROUND_IMAGE = require('../assets/login-background.jpg')
