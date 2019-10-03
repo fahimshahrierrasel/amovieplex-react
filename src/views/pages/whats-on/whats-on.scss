@@ -2,11 +2,7 @@
     margin-top: 50px;
 }
 
-.whats-on__main-content {
-    padding: 0 100px;
-}
-
-.hero {
+.whats-on__container .hero {
     width: 100%;
     height: 300px;
     display: flex;
@@ -14,12 +10,15 @@
     align-items: center;
     background-position: center;
     background-size: cover;
+    h1 {
+        width: 100%;
+        text-align: center;
+        color: white;
+    }
 }
 
-.hero h1 {
-    width: 100%;
-    text-align: center;
-    color: white;
+.whats-on__main-content {
+    padding: 0 100px;
 }
 
 .live-search {
