@@ -1,0 +1,25 @@
+.sidebar-item__container {
+  display: flex;
+  justify-content: flex-start;
+  text-decoration: none;
+  padding: 10px;
+  border-left: 5px solid #ffffff;
+  .icon {
+    color: #5b6cf8;
+  }
+  .title {
+    padding-left: 10px;
+    color: #000063;
+  }
+  &:hover {
+    background-color: #bec4fa;
+  }
+}
+
+.sidebar-active {
+  border-color: #5b6cf8;
+}
+
+.sidebar__title-active {
+  color: #5b6cf8 !important;
+}

@@ -1,0 +1,16 @@
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  .sidebar-header {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f4f6fa;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      height: 40px;
+    }
+  }
+}

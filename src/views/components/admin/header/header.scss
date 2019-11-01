@@ -1,0 +1,22 @@
+.admin-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .header-icon__button {
+    margin: 0 10px;
+    color: #b1bed3;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .avatar {
+      height: 36px;
+      border-radius: 50%;
+      padding: 0 10px;
+    }
+    span {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,1 +1,1 @@
-export { default } from './movie-card-carousel';
+export { default } from "./movie-card-carousel";
