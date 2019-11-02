@@ -8,10 +8,6 @@ import "./sidebar.scss";
 
 const Sidebar = () => {
   const location = useLocation();
-  const items = [];
-  for (let i = 0; i < 100; i++) {
-    items.push(i);
-  }
   return (
     <div className="sidebar__container">
       <div className="sidebar-header">
@@ -28,18 +24,19 @@ const Sidebar = () => {
         <SidebarItem
           title="Movies"
           icon={faFilm}
-          route={Routes.ADMIN_MOVIES()}
-          active={location.pathname === Routes.ADMIN_MOVIES()}
-        />
-        {items.map(item => (
+          active={location.pathname.includes("movies")}
+        >
           <SidebarItem
-            key={item}
-            title={`Item ${item}`}
-            icon={faFilm}
-            route={Routes.ADMIN_MOVIES() + `/${item}`}
-            active={location.pathname === Routes.ADMIN_MOVIES() + `/${item}`}
+            title="All Movies"
+            route={Routes.ADMIN_MOVIES()}
+            active={location.pathname === Routes.ADMIN_MOVIES()}
           />
-        ))}
+          <SidebarItem
+            title="New Movies"
+            route="/admin/movies/new"
+            active={location.pathname === "/admin/movies/new"}
+          />
+        </SidebarItem>
       </div>
     </div>
   );
