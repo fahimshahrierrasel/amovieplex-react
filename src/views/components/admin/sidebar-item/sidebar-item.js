@@ -9,10 +9,12 @@ const SidebarItem = ({ title, icon, route, active }) => {
       to={route}
       className={`sidebar-item__container ${active ? "sidebar-active" : ""}`}
     >
-      <FontAwesomeIcon icon={icon} className="icon" />
-      <span className={`title ${active ? "sidebar__title-active" : ""}`}>
-        {title}
-      </span>
+      <div className="sidebar-item__content">
+        <FontAwesomeIcon icon={icon} className="icon" />
+        <span className={`title ${active ? "sidebar__title-active" : ""}`}>
+          {title}
+        </span>
+      </div>
     </Link>
   );
 };
