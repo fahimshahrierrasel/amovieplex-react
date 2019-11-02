@@ -1,0 +1,30 @@
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  width: 15%;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  .sidebar-header {
+    padding: 10px 5px;
+    border-bottom: 1px solid #f4f6fa;
+    margin-bottom: 20px;
+    position: fixed;
+    background-color: #fff;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      height: 40px;
+    }
+  }
+  .sidebar-item__list {
+    padding-top: 85px;
+  }
+}

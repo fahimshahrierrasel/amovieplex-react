@@ -1,27 +1,53 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Contact from "./pages/contact/Contact";
-import MovieDetails from "./pages/movie_details/MovieDetails";
-import "./style.scss";
-import ScrollToTop from './components/hoc/sroll-to-top'
+import { Routes } from "./constants/routes";
+import "./app.scss";
+import Header from "./views/components/header";
+import Footer from "./views/components/footer";
+import Home from "./views/pages/home";
+import WhatsOn from "./views/pages/whats-on";
+import About from "./views/pages/about";
+import Contact from "./views/pages/contact";
+import MovieDetails from "./views/pages/movie-details";
+import ScrollToTop from "./views/components/hoc/sroll-to-top";
+import Login from "./views/pages/login";
+import AdminBase from "./views/pages/admin/base";
 
 function App() {
   return (
     <Router>
       <ScrollToTop>
         <div className="container">
-          <Header />
-          <div className="main-content">
-            <Route path="/" exact component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/movie" component={MovieDetails} />
-          </div>
-          <Footer />
+          <Route
+            render={({ location }) => {
+              return !location.pathname.includes("admin") &&
+                location.pathname !== Routes.LOGIN_PAGE() ? (
+                <Header />
+              ) : null;
+            }}
+          />
+
+          <main className="main-content">
+            <Route exact path={Routes.HOME_PAGE()} component={Home} />
+            <Route exact path={Routes.WHATS_ON_PAGE()} component={WhatsOn} />
+            <Route exact path={Routes.ABOUT_PAGE()} component={About} />
+            <Route exact path={Routes.CONTACT_PAGE()} component={Contact} />
+            <Route exact path={Routes.LOGIN_PAGE()} component={Login} />
+            <Route
+              path={Routes.MOVIE_DETAIL_PAGE(":id")}
+              component={MovieDetails}
+            />
+            <Route path={Routes.ADMIN_DASHBOARD()} component={AdminBase} />
+          </main>
+
+          <Route
+            render={({ location }) => {
+              return !location.pathname.includes("admin") &&
+                location.pathname !== Routes.LOGIN_PAGE() ? (
+                <Footer />
+              ) : null;
+            }}
+          />
         </div>
       </ScrollToTop>
     </Router>

@@ -1,0 +1,92 @@
+@import "../../styles//variables.scss";
+
+.login-page {
+  max-width: 100%;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 2em 3.2em;
+    width: 450px;
+    height: 600px;
+    background: rgba(0, 0, 0, 0.84);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    color: $light-color;
+
+    .title {
+      font-size: 2rem;
+      padding: 0.88em 0;
+      border-bottom: 1px solid white;
+    }
+    .form-body {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+
+      .form-control {
+        display: flex;
+        flex-direction: column;
+        padding: 0.66em 0;
+
+        label {
+          padding: 0.5em 0;
+        }
+        input {
+          background-color: $dark-color;
+          border: none;
+          outline: none;
+          font-size: 1rem;
+          color: white;
+          padding: 0.9em 0.7em;
+          border-radius: 10px;
+          letter-spacing: 0.1em;
+          caret-color: $light-color;
+          &:focus-within {
+            background: lighten($dark-color, 10);
+          }
+        }
+      }
+
+      .btn-container {
+        display: flex;
+        padding: 1em 0;
+        .btn {
+          background: rgba($primary-color, 0.9);
+          color: $light-color;
+          padding: 0.4em 0.8em;
+          font-size: 1.2rem;
+          border-radius: 8px;
+          text-align: center;
+          transition: 0.3s;
+          &:hover {
+            cursor: pointer;
+            background-color: lighten($primary-color, 5);
+          }
+        }
+      }
+    }
+
+    .links {
+      margin-top: 5em;
+      a {
+        color: $primary-color;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
