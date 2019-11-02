@@ -1,20 +1,19 @@
 $navColor: #3498db;
 nav {
   width: 100vw;
-  background:$navColor;
+  background: $navColor;
   z-index: 999;
-  top:0;
+  top: 0;
   left: 0;
   position: fixed;
-  box-shadow:3px 0px 10px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 0px 10px 1px rgba(0, 0, 0, 0.3);
 
-  .container{
+  .container {
     width: 90%;
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    
 
     a {
       color: white;
@@ -26,15 +25,14 @@ nav {
     ul {
       list-style: none;
       color: $navColor;
-      display: flex; 
+      display: flex;
 
       li {
-
         a {
           display: block;
           text-decoration: none;
-          color:white;
-          padding: 1em .8em;
+          color: white;
+          padding: 1em 0.8em;
           border-bottom: 2px solid transparent;
           transition: 0.2s;
         }

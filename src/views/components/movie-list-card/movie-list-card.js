@@ -1,7 +1,7 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import "./movie-list-card.scss";
-import { Routes } from '../../../constants/routes'
+import { Routes } from "../../../constants/routes";
 
 function MovieListCard({ movie, history }) {
   return (
@@ -13,7 +13,8 @@ function MovieListCard({ movie, history }) {
         <h2
           role="presentation"
           className="movie__title"
-          onClick={() => history.push(Routes.MOVIE_DETAIL_PAGE(movie.title))}>
+          onClick={() => history.push(Routes.MOVIE_DETAIL_PAGE(movie.title))}
+        >
           {movie.title}
         </h2>
         <p className="movie__desc">
