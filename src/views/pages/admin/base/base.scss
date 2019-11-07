@@ -16,7 +16,7 @@
     .main-content {
       padding: $admin-header-height 10px 0 10px;
       background-color: #f3f6fa;
-      height: calc(100vh - $admin-header-height);
+      height: calc(100vh - #{$admin-header-height});
     }
   }
 }
