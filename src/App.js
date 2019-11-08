@@ -11,6 +11,7 @@ import Contact from "./views/pages/contact";
 import MovieDetails from "./views/pages/movie-details";
 import ScrollToTop from "./views/components/hoc/sroll-to-top";
 import Login from "./views/pages/login";
+import AdminLogin from "./views/pages/admin/login";
 import AdminBase from "./views/pages/admin/base";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               path={Routes.MOVIE_DETAIL_PAGE(":id")}
               component={MovieDetails}
             />
+            <Route exact path={Routes.ADMIN_LOGIN()} component={AdminLogin} />
             <Route path={Routes.ADMIN_DASHBOARD()} component={AdminBase} />
           </main>
 

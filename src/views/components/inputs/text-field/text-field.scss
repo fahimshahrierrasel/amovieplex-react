@@ -1,0 +1,52 @@
+$animation-duration: 0.5s;
+@mixin label-inactive {
+  font-size: 1rem;
+  background: #fff;
+  transform: translateY(-10px);
+}
+
+@mixin label-active {
+  font-size: 1.2rem;
+  background: none;
+  transform: translateY(12px);
+}
+
+.form-field {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid black;
+  padding: 5px;
+  position: relative;
+}
+
+.form-field__error {
+  border-color: red;
+}
+
+.form-field__label {
+  left: 0;
+  margin: 0 6px;
+  padding: 0 4px;
+  position: absolute;
+  top: 0;
+  @include label-inactive();
+  transition: all $animation-duration;
+}
+
+.form-field input {
+  width: 100%;
+  font-size: 1.2rem;
+  outline: none;
+  border: none;
+  padding: 5px;
+  &:placeholder-shown {
+    ~ .form-field__label {
+      @include label-active();
+    }
+  }
+  &:focus {
+    ~ .form-field__label {
+      @include label-inactive();
+    }
+  }
+}
