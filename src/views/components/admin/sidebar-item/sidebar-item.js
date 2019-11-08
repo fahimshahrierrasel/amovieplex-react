@@ -3,19 +3,28 @@ import "./sidebar-item.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-const SidebarItem = ({ title, icon, route, active }) => {
+const SidebarItem = ({ title, icon, route, active, children }) => {
   return (
-    <Link
-      to={route}
-      className={`sidebar-item__container ${active ? "sidebar-active" : ""}`}
-    >
-      <div className="sidebar-item__content">
-        <FontAwesomeIcon icon={icon} className="icon" />
-        <span className={`title ${active ? "sidebar__title-active" : ""}`}>
-          {title}
-        </span>
-      </div>
-    </Link>
+    <div>
+      <Link
+        to={route}
+        className={`sidebar-item__container ${
+          route ? "sidebar-item__link" : ""
+        } ${icon && active ? "sidebar-active" : ""}`}
+      >
+        <div className="sidebar-item__content">
+          <FontAwesomeIcon icon={icon} className="icon" />
+          <span
+            className={`title ${icon ? "" : "sidebar__child-item"} ${
+              active ? "sidebar__title-active" : ""
+            }`}
+          >
+            {title}
+          </span>
+        </div>
+      </Link>
+      {children && <div className="sidebar-item__children">{children}</div>}
+    </div>
   );
 };
 

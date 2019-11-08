@@ -3,7 +3,6 @@ import "./base.scss";
 import { Switch, Route } from "react-router-dom";
 import { Routes } from "../../../../constants/routes";
 import AdminHeader from "../../../components/admin/header";
-import AdminFooter from "../../../components/admin/footer";
 import Sidebar from "../../../components/admin/sidebar";
 import Dashboard from "../dashboard";
 import Movies from "../movies";
@@ -26,7 +25,6 @@ const AdminBase = () => {
             <Route path={Routes.ADMIN_MOVIES()} component={Movies} />
           </Switch>
         </div>
-        <AdminFooter />
       </div>
     </div>
   );

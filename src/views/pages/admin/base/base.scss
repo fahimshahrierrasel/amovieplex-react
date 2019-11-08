@@ -14,9 +14,9 @@
     background-color: #f3f6fa;
     height: 100%;
     .main-content {
-      margin: $admin-header-height 10px;
+      padding: $admin-header-height 10px 0 10px;
       background-color: #f3f6fa;
-      height: calc(100vh - 110px);
+      height: calc(100vh - #{$admin-header-height});
     }
   }
 }
