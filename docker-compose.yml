@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  amovieplex-frontend:
+    build: .
+    command: yarn start
+    volumes:
+      - './src:/app/src'
+      - './public:/app/public'
+    ports:
+      - '3001:3000'
+    depends_on:
+      - amovieplex-backend
+  amovieplex-backend:
+    image: 'docker.pkg.github.com/fahimshahrierrasel/amovieplex-backend/amovieplex-backend:master'
+    environment:
+      - ENCRYPTION_KEY=J@NcRfUjXn2r5u8x/A?D*G-KaPdSgVkYp3s6v9y$B&E)H+MbQeThWmZq4t7w!z%C
+      - 'DB_CONN=mongodb://backend-mongodb:27017'
+      - DB_NAME=movieplex_dev
+    command: realize start --run
+    ports:
+      - '8000:8080'
+    depends_on:
+      - backend-mongodb
+  backend-mongodb:
+    image: mongo
+    restart: on-failure
+    volumes:
+      - 'database_vol:/data/db'
+    ports:
+      - '27017:27017'
+volumes:
+  database_vol: null
