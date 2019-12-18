@@ -11,5 +11,6 @@ RUN yarn
 
 # Copy Everything to Working Directory
 COPY . .
+COPY .env.example /app/.env
 
 EXPOSE 3000
