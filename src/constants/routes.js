@@ -7,7 +7,7 @@ export const Routes = {
   SIGN_UP_PAGE: () => "/sign-up",
   MOVIE_DETAIL_PAGE: id => `/movie/${id}`,
   // Admin Routes
+  ADMIN: () => "/admin",
   ADMIN_LOGIN: () => "/admin/login",
-  ADMIN_DASHBOARD: () => "/admin/dashboard",
   ADMIN_MOVIES: () => "/admin/movies"
 };

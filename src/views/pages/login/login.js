@@ -1,11 +1,11 @@
 import "./login.scss";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 import { LOGIN_BACKGROUND_IMAGE } from "../../../constants/images";
+import { Routes } from "../../../constants/routes";
 
-import React, { Component } from "react";
-
-export class Login extends Component {
+class Login extends Component {
   state = {
     emailOrPhone: "",
     password: ""
@@ -71,6 +71,9 @@ export class Login extends Component {
             <div className="links">
               <div className="sign-up">
                 New to Movie Plex ? <Link to="/sign-up">Sign Up here</Link>
+              </div>
+              <div className="sign-up">
+                Go To <Link to={Routes.ADMIN_LOGIN()}>Admin Panel</Link>
               </div>
             </div>
           </div>

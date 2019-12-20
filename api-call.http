@@ -1,0 +1,22 @@
+# Auth (Register Admin)
+POST {{host}}/auth/register
+Accept: application/json
+
+{
+	"email": "admin@amovieplex.com",
+	"password": "asdf1234",
+	"role": "admin"
+}
+
+###
+
+# Auth (Login)
+POST {{host}}/auth/login
+Accept: application/json
+
+{
+  "email": "admin@amovieplex.com",
+  "password": "asdf1234"
+}
+
+###

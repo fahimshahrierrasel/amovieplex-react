@@ -8,9 +8,19 @@ import {
   faIdCard,
   faSignOutAlt
 } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
 import { UserAvatar } from "../../../../constants/images";
+import { connect } from "react-redux";
+import { userLogout } from "../../../../redux/auth/actions";
+import { Routes } from "../../../../constants/routes";
 
-const AdminHeader = () => {
+const AdminHeader = ({ logout }) => {
+  const history = useHistory();
+  const logoutClickHandler = () => {
+    logout().then(() => {
+      history.push(Routes.LOGIN_PAGE());
+    });
+  };
   return (
     <div className="admin-header">
       <FontAwesomeIcon icon={faSearch} className="header-icon__button" />
@@ -26,7 +36,7 @@ const AdminHeader = () => {
             <FontAwesomeIcon icon={faIdCard} className="header-icon__button" />
             Profile
           </button>
-          <button>
+          <button onClick={logoutClickHandler}>
             <FontAwesomeIcon
               icon={faSignOutAlt}
               className="header-icon__button"
@@ -39,4 +49,8 @@ const AdminHeader = () => {
   );
 };
 
-export default AdminHeader;
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(userLogout())
+});
+
+export default connect(null, mapDispatchToProps)(AdminHeader);
