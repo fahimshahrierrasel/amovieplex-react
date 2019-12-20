@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { LOGIN_BACKGROUND_IMAGE } from "../../../constants/images";
 import { Routes } from "../../../constants/routes";
 
-export class Login extends Component {
+class Login extends Component {
   state = {
     emailOrPhone: "",
     password: ""

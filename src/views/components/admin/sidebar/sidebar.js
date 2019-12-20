@@ -18,8 +18,8 @@ const Sidebar = () => {
         <SidebarItem
           title="Dashboard"
           icon={faTachometerAlt}
-          route={Routes.ADMIN_DASHBOARD()}
-          active={location.pathname === Routes.ADMIN_DASHBOARD()}
+          route={Routes.ADMIN()}
+          active={location.pathname === Routes.ADMIN()}
         />
         <SidebarItem
           title="Movies"

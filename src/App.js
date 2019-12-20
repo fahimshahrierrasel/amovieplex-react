@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { Routes } from "./constants/routes";
 import "./app.scss";
 import Header from "./views/components/header";
@@ -13,8 +13,9 @@ import ScrollToTop from "./views/components/hoc/sroll-to-top";
 import Login from "./views/pages/login";
 import AdminLogin from "./views/pages/admin/login";
 import AdminBase from "./views/pages/admin/base";
+import { connect } from "react-redux";
 
-function App() {
+function App({ currentUser }) {
   return (
     <Router>
       <ScrollToTop>
@@ -38,8 +39,18 @@ function App() {
               path={Routes.MOVIE_DETAIL_PAGE(":id")}
               component={MovieDetails}
             />
-            <Route exact path={Routes.ADMIN_LOGIN()} component={AdminLogin} />
-            <Route path={Routes.ADMIN_DASHBOARD()} component={AdminBase} />
+            <Route
+              exact
+              path={Routes.ADMIN_LOGIN()}
+              render={props =>
+                currentUser && currentUser.role === "admin" ? (
+                  <Redirect to={Routes.ADMIN()} />
+                ) : (
+                  <AdminLogin {...props} />
+                )
+              }
+            />
+            <Route path={Routes.ADMIN()} component={AdminBase} />
           </main>
 
           <Route
@@ -56,4 +67,8 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(App);
