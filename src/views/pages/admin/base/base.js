@@ -5,8 +5,8 @@ import { Routes } from "../../../../constants/routes";
 import AdminHeader from "../../../components/admin/header";
 import Sidebar from "../../../components/admin/sidebar";
 import Dashboard from "../dashboard";
-import Movies from "../movies";
 import PrivateRoute from "../../../components/hoc/private-route/private-route";
+import MovieContainer from "../../../containers/admin/movies/movies-container";
 
 const AdminBase = () => {
   let { path } = useRouteMatch();
@@ -23,7 +23,7 @@ const AdminBase = () => {
               <Dashboard />
             </PrivateRoute>
             <PrivateRoute path={Routes.ADMIN_MOVIES()}>
-              <Movies />
+              <MovieContainer />
             </PrivateRoute>
           </Switch>
         </div>

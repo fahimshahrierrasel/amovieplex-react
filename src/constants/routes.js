@@ -9,5 +9,6 @@ export const Routes = {
   // Admin Routes
   ADMIN: () => "/admin",
   ADMIN_LOGIN: () => "/admin/login",
-  ADMIN_MOVIES: () => "/admin/movies"
+  ADMIN_MOVIES: () => "/admin/movies",
+  NEW_MOVIES: () => "/admin/movies/new"
 };

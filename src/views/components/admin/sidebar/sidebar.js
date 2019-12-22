@@ -33,8 +33,8 @@ const Sidebar = () => {
           />
           <SidebarItem
             title="New Movies"
-            route="/admin/movies/new"
-            active={location.pathname === "/admin/movies/new"}
+            route={Routes.NEW_MOVIES()}
+            active={location.pathname === Routes.NEW_MOVIES()}
           />
         </SidebarItem>
       </div>
